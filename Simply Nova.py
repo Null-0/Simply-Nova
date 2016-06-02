@@ -1,6 +1,7 @@
 from novaclient.client import Client
 import time
 
+## This is what I use to query my home openstack network, it is a WIP
 ## Good luck using this to hack me;  Syntax for this client is: version, username, pw, project, url
 nova_client = Client("2","admin","977e4e695fdc4936","admin","http://10.5.7.18:5000/v2.0")
 def find_servers():
@@ -17,3 +18,5 @@ def find_servers():
         time.sleep(28800)
         find_servers()
 find_servers()
+
+## TODO:  better error handling, loop  w/ sleep
